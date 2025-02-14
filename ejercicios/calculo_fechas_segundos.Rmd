@@ -1,0 +1,51 @@
+---
+editor_options:
+  markdown:
+    wrap: 72
+output: pdf_document
+---
+
+# Calcular la fecha que es, partiendo del 2018 y hasta 250 millones de
+segundos después \# Un día tiene 86400 segundos
+
+# Un día tiene 86,400 segundos
+fecha_calculada = function(x)
+{ 
+  bisiesto = 0
+  normal = 0
+  ciclo = 1
+  anio_inicial = 2018
+  anio = anio_inicial
+  dias = x %/% 86400
+  segundos_restantes_dias = x %% 86400
+  horas = segundos_restantes_dias %/% 3600
+  minutos = horas %/% 60
+  iteraciones = dias %/% 365
+  while(ciclo <= iteraciones)
+  {
+    if(anio %% 4 == 0)
+    {
+      bisiesto = bisiesto + 1
+    }
+    else
+    {
+      normal = normal + 1
+    }
+    anio = anio + 1
+    ciclo = ciclo + 1
+  }
+  dia_del_anio = dias %% 365 - bisiesto
+  dias_restantes_del_anio = dia_del_anio
+  yyyy = anio_inicial + iteraciones
+  fecha_inicio <- as.Date(paste(yyyy, "01-01", sep = "-"))
+  fecha_resultante <- fecha_inicio + (dia_del_anio - 1)
+  print(paste(sprintf("Días: %f", dias)))
+  print(paste(sprintf("Horas: %f", horas)))
+  print(paste(sprintf("Minutos: %f", minutos)))
+  print(paste(sprintf("Iteraciones: %f", iteraciones)))
+  print(paste(sprintf("Dia del año %f: %f", anio, dia_del_anio)))
+  print(bisiesto)
+  print(normal)
+  print(paste("Fecha:",fecha_resultante,horas,":",minutos))
+}
+
