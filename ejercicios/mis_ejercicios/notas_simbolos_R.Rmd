@@ -1,0 +1,28 @@
+---
+title: "Símbolos en LatEX"
+author: "Juan Carlos G Farias M"
+date: "2025-04-08"
+output: pdf_document
+---
+
+## Símbolos
+
+Al utilizar LaTEX, se pueden escribir ecuaciones de forma completa ytilizando todo tipo de signos matemáticos. Basta con envolver la ecuación entre \$ \$ para poder escribir una ecuación. Ahora que si se utiliza un doble símblo de USD, entonces, la ecuación se centrará y se mostrará de esa forma en el Markdown
+
+Por ejemplo:
+
+pm quedaría como $\pm$, esto se mostrará de la forma correcta en el markdown. Otros símbolos que se pueden utilizar:
+
+$$\epsilon$$
+$$\Upsilon$$
+
+$$\frac{3}{4}$$
+
+$$\lim$$
+
+$$\tilde{y}$$
+$$\widetilde{abcde}$$
+$$\sin{x}$$
+Sea $x \exists$
+
+$$\int_{a}^{b}$$
