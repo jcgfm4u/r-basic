@@ -1,0 +1,46 @@
+---
+title: "Memorias de cálculo"
+author: "Juan Carlos G Farias M"
+date: "2026-06-23"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Cálculo de impuestos y retenciones para el personal de Capítulo 3000 del INBAL
+
+Este documento tiene por intención mostrar el cálculo de impuestos trasladados y retenidos.
+
+### Impuesto al valor agregado - IVA (traslado)
+
+Suponiendo que X es el monto bruto mensual, el IVA, es un traslado del 16% sobre el monto bruto. Dicho de otra forma:
+
+$$IVA = X\cdot0.16$$
+Suponiendo que el monto bruto mensual es de \$25,000.00, entonces, tenemos lo siguiente:
+
+$$Subtotal = X + (X\cdot0.16) \longrightarrow Subtotal = 25000 + (25000\cdot0.16) \longrightarrow Subtotal = 25000 + 4000 \longrightarrow Subtotal = 29000$$
+## Sobre las retenciones
+
+De acuerdo con la miscelánea fiscal actual, las retenciones por parte del retenedor de impuestos, habitualmente una persona moral, son el 10% para lo referente al ISR (Impuesto Sobre la Renta) y dos terceras partes del IVA (Impuesto al Valor Agregado).
+
+Según lo anterior, quedaría de la siguiente forma:
+
+$$ISR = X\cdot0.10$$
+Y para las retenciones de IVA:
+$$IVA_{ret} = (X\cdot0.16)\cdot\dfrac{2}{3}$$
+## Líquido a cobrar
+
+Una vez que se han definido los traslados y las retenciones, se tendrá que el líquido a cobrar, quedaría de la siguiente forma:
+
+$$Liquido = (X + (X\cdot0.16)) - (X\cdot0.16)\cdot\dfrac{2}{3} - X\cdot0.10$$
+### Fragmentos de código
+
+Por lo que vi, los fragmentos de código se pueden insertar con los backticks, o usando el botón de inserción de código
+```{python}
+x = 0
+x = x + 1
+x
+```
+
