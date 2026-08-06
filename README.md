@@ -28,3 +28,5 @@ Una vez termines el curso podrás seguir con los mejores cursos de análisis de 
 Esto es una actualización.
 
 Esta es otra actualización.
+
+# Hoy se vieron algunas instrucciones sobre la interfaz de usuario de RStudio
